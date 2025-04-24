@@ -1,8 +1,15 @@
 import google.generativeai as genai
 from datetime import datetime
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Loads variables from .env
+
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+
 
 # Configuration 
-GEMINI_API_KEY = 'AIzaSyCzVAwxMHwc5G9bAOXl-VxJnGiON4je1vY'  # Get from https://ai.google.dev/
+#GEMINI_API_KEY = 'AIzaSyCzVAwxMHwc5G9bAOXl-VxJnGiON4je1vY'  # Get from https://ai.google.dev/
 
 # Initialize Gemini
 genai.configure(api_key=GEMINI_API_KEY)
